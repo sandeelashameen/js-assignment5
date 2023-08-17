@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<h1>signup-form</h1>
+  <form id="signup-form" onsubmit="displayFormData(event)">
+    <div>
+      <label for="name">Name:</label>
+      <input type="text" id="name" required>
+    </div>
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" required>
+    </div>
+    <div>
+      <label for="password">Password:</label>
+      <input type="password" id="password" required>
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+  
+  <div id="form-data-container"></div>
+  
+  <h1>Image Open In modal</h1>
+    <div id="image-container">
+        <div class="image-wrapper">
+          <img src="https://img.freepik.com/free-photo/group-elephants-big-green-tree-wilderness_181624-16897.jpg?w=900&t=st=1692286239~exp=1692286839~hmac=fc41b21a81791749f81ae05dfcb6321d4dff49d3cf51339b04a1090ec414e520" onclick="openModal(this)">
+        </div>
+        <div class="image-wrapper">
+          <img src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?size=626&ext=jpg&ga=GA1.2.680911312.1692213927&semt=sph" onclick="openModal(this)">
+        </div>
+        <div class="image-wrapper">
+          <img src="https://img.freepik.com/free-photo/beautiful-scenery-rock-formations-by-sea-queens-bath-kauai-hawaii-sunset_181624-36857.jpg?w=900&t=st=1692286760~exp=1692287360~hmac=d3eb964f4d57d9bee31749a1d569f8d1f8862e1a5a9f94f61e0a094e3fc20e76" onclick="openModal(this)">
+        </div>
+        <div class="image-wrapper">
+          <img src="https://images.pexels.com/photos/381739/pexels-photo-381739.jpeg?auto=compress&cs=tinysrgb&w=600" onclick="openModal(this)">
+        </div>
+      </div>
+      <div id="modal" class="modal" onclick="closeModal()">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modal-img">
+      </div>
+      <h1>Paragraph Zoom-in Zoom-out</h1>
+      <p id="zoomed-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis voluptatibus impedit beatae expedita cupiditate libero consectetur quibusdam, aliquam optio dolorum est. Vitae, ullam fugiat eum ducimus necessitatibus iure facilis ut!</p>
+      <button onclick="zoomIn()">Zoom In (+)</button>
+      <button onclick="zoomOut()">Zoom Out (-)</button>
+    
+      <h1>ReadMore </h1>
+      <div class="item">
+        <h3>Item Title</h3>
+        <p class="item-description">ES6 or ECMAScript 2015 is the 6th version of the ECMAScript programming language. ECMAScript is the standardization of Javascript which was released in 2015 and subsequently renamed as ECMAScript 2015.
+          ECMAScript and Javascript are both different in nature.ECMAScript: It is the specification defined in ECMA-262 for creating a general-purpose scripting language. In simple terms, it is a standardization for creating a scripting language. It was introduced by Ecma International and is basically an implementation with which we learn how to create a scripting language. 
+
+          Javascript: A general-purpose scripting language that conforms to the ECMAScript specification.It is basically an implementation that tells us how to use a scripting language.</p>
+        <a href="#" class="read-more-link">Read more</a>
+        <p class="item-full-description">Javascript ES6 has been around for a few years now, and it allows us to write code in a clever way which basically makes the code more modern and more readable. It’s fair to say that with the use of ES6 features we write less and do more, hence the term ‘write less, do more’ definitely suits ES6. 
+
+          ES6 introduced several key features like const, let, arrow functions, template literals, default parameters, and a lot more. Let’s take a look at them one by one.
+          “const” and “let” 
+          
+          Before ES6 we mainly made use of the var keyword whenever we wanted to declare a variable. But it had some serious issues, also it was not the developers’ favorite so in the ES6 version, we were introduced to const and let keywords which allow us to store variables. They both have their own way of storing variables.
+          
+          const: The const keyword is mainly used to store that variable whose value is not going to be changed. Consider an example where you are creating a web application where you want to store a variable whose value is not going to change, then const is definitely the best choice to store that variable. In javascript, const is considered to be more powerful than var. Once used to store a variable it can’t be reassigned. In simple words, it is an immutable variable except when used with objects</p>
+      </div>
+      
+      <h1>Student Detail form</h1>
+      <form id="student-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+        <label for="age">Age:</label>
+        <input type="number" id="age" required>
+        <label for="grade">Grade:</label>
+        <input type="text" id="grade" required>
+        <button type="submit">Add Student</button>
+      </form>
+      
+      <table id="student-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Grade</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      
+      <div id="edit-form" style="display: none;">
+        <h3>Edit Student</h3>
+        <label for="edit-name">Name:</label>
+        <input type="text" id="edit-name" required>
+        <label for="edit-age">Age:</label>
+        <input type="number" id="edit-age" required>
+        <label for="edit-grade">Grade:</label>
+        <input type="text" id="edit-grade" required>
+        <button id="save-edit-btn" type="button">Save</button>
+        <button id="cancel-edit-btn" type="button">Cancel</button>
+      </div>
+      
+ <script src="./index.js"></script>            
+</body>
+</html>
